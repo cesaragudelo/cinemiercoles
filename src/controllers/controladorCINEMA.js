@@ -279,11 +279,12 @@ peliculas.forEach(function(pelicula){
     fila.appendChild(columna)
 
 })
-/*
+
 let filatres=document.getElementById("titulo")
 let titulo1=document.createElement("h1")
-titulo1.textContent="Estrenos"
-filatres.appendChild(titulo1)*/
+titulo1.classList.add("text-center")
+titulo1.textContent="Proximos estrenos"
+filatres.appendChild(titulo1)
 
 
 //------------------------------------------------------
@@ -343,7 +344,7 @@ peliculasestreno.forEach(function(estreno){
     tarjeta.appendChild(director)
     tarjeta.appendChild(actores)
      columna.appendChild(tarjeta)
-     fila.appendChild(columna)
+     filaDos.appendChild(columna)
 })
 
 //detectando seleccion de una pelicula
