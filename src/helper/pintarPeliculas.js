@@ -40,7 +40,7 @@ export function pintarPeliculas(peliculas){
         // 4. crear nombre de la pelicula
         let nombre=document.createElement("h2")
         nombre.classList.add("card-title","text-center")
-        nombre.textContent=pelicula.nombre
+        nombre.textContent="Nombre: "+pelicula.nombre
         // 4. creamos el genero de cada pelicula
         let genero=document.createElement("h3")
         genero.classList.add("text-start")
@@ -53,11 +53,12 @@ export function pintarPeliculas(peliculas){
     
         //7. creamos la sinopsis
         let sinopsis=document.createElement("p")
-        //sinopsis.classList.add("d-none")
+        sinopsis.classList.add("sinopsis")
         sinopsis.textContent=pelicula.sinopsis
     
         //8. creamos director
-        let director=document.createElement("h5")
+        let director=document.createElement("p")
+        director.classList.add("director")
         director.textContent="Director: "+pelicula.director
     
         //9.creamos actores

@@ -123,8 +123,8 @@ fila.addEventListener("click",function(evento){
    peliculaSeleccionada.nombre=evento.target.parentElement.querySelector('h2').textContent //nombre
    peliculaSeleccionada.genero=evento.target.parentElement.querySelector('h3').textContent //genero
    peliculaSeleccionada.idioma=evento.target.parentElement.querySelector('h4').textContent //idioma
-   peliculaSeleccionada.sinopsis=evento.target.parentElement.querySelector('p').textContent //sinopsis
-   peliculaSeleccionada.director=evento.target.parentElement.querySelector('h5').textContent //director
+   peliculaSeleccionada.sinopsis=evento.target.parentElement.querySelector('.sinopsis').textContent //sinopsis
+   peliculaSeleccionada.director=evento.target.parentElement.querySelector('.director').textContent //director
    peliculaSeleccionada.actores=evento.target.parentElement.querySelector('h6').textContent //actores
 
    console.log(peliculaSeleccionada)
