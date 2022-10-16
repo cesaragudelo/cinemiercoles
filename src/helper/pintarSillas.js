@@ -24,6 +24,9 @@ export function pintarSillas(asientos, cinema){
         })
         cinema.appendChild(fila)
     })
+
+    
+    
     
 
 }

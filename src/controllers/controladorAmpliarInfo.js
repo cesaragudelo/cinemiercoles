@@ -14,7 +14,7 @@ let sinopsis=datosPeliculaSeleccionada.sinopsis
 let actores=datosPeliculaSeleccionada.actores
 let director=datosPeliculaSeleccionada.director
 
-//
+// CARGANDO DATOS
 let foto=document.getElementById("foto")
 foto.src=poster
 let nom=document.getElementById("titulo")
