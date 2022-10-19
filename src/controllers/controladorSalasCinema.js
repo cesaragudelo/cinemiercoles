@@ -101,7 +101,7 @@ reservar.addEventListener("click", function(evento){
         cantidad.textContent="Cantidad de sillas reservadas: "+sumar
 
     let ValorPagar=document.createElement("h3")
-        ValorPagar.textContent="Valor a pagar: "+sumar*10000
+        ValorPagar.textContent="Valor a pagar: "+sumar*10000+"$"
     reserva.appendChild(cantidad)
     reserva.appendChild(ValorPagar)
     pagar.appendChild(reserva)
