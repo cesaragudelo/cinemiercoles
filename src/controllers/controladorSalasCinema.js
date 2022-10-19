@@ -50,24 +50,32 @@ cinema.addEventListener("click", function(evento){
                       if(asiento.estado==0){
                         asiento.estado=1
                         evento.target.src="../../assets/img/cinema-chair-verde.png"
+
                         sumar=sumar+1
                         pintarRojo.push(asiento.id)
                         guardarsrc.push(evento)
-                       // console.log(pintarRojo)
-                       //console.log(guardarsrc)
+                       console.log(pintarRojo)
+                       console.log(guardarsrc)
+
                     }else if(asiento.estado==1){
                         asiento.estado=0
                         evento.target.src="../../assets/img/cinema-chair.png"
                         for (let index = 0; index < pintarRojo.length; index++){
                             if(pintarRojo[index]==asiento.id){
                                 pintarRojo.splice(index,1)
-                                guardarsrc.splice(index,1)
+                                //guardarsrc.splice(index,1)
+                                console.log(pintarRojo)
                             }
                         }
+                        //------nuevo for comprobar guardarsrc
+                        for (let i = 0; i < guardarsrc.length; i++) {
+                            if(guardarsrc[i]==asiento.evento){
+                                guardarsrc.splice(i,1)
+                                console.log(guardarsrc)
+                            }
+                            
+                        }
                         sumar=sumar-1
-                       // console.log(sumar)
-                      // console.log(pintarRojo)
-                        //console.log(guardarsrc)
                     }
 
                 }
@@ -84,9 +92,6 @@ cinema.addEventListener("click", function(evento){
 let reservar=document.getElementById("reservar")
 reservar.addEventListener("click", function(evento){
 //------------------------------------------------------------
-    //console.log("asientos reservados: "+sumar)
-    //console.log("valor a pagar: "+sumar*10000)
-
     let  pagar=document.getElementById("pagar")
 
     let reserva=document.createElement("div")
@@ -106,14 +111,15 @@ reservar.addEventListener("click", function(evento){
 
   for (let index = 0; index < guardarsrc.length; index++) {
      guardarsrc[index].target.src="../../assets/img/cinema-chair-red.png"
-     console.log(guardarsrc[index])   
+     
+     //console.log(guardarsrc[index])   
   }
 
 
    
   
     localStorage.setItem("pintarRojo",JSON.stringify(pintarRojo))
-    console.log(pintarRojo)
+    //console.log(pintarRojo)
 })
 let reiniciar=document.getElementById("reiniciar")
 
