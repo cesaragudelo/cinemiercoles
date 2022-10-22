@@ -69,7 +69,9 @@ cinema.addEventListener("click", function(evento){
                         }
                         //------nuevo for comprobar guardarsrc
                         for (let i = 0; i < guardarsrc.length; i++) {
-                            if(guardarsrc[i]==asiento.evento){
+                            console.log(guardarsrc)
+                            if(guardarsrc[i].target.id==evento.target.id){
+                                
                                 guardarsrc.splice(i,1)
                                 console.log(guardarsrc)
                             }
